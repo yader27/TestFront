@@ -1,0 +1,102 @@
+<app-nav-bar (nextProperti)="nextProperti()" [menuOptions]="menuOptions"  ></app-nav-bar>
+<div class="container-fluid backgroundContainer">
+  <div class="container-fluid  p-4 d-flex justify-content-center">
+  <app-tab-card></app-tab-card>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-4">
+      <h6 class="descriptionTitle" >{{ properties[index].title }}</h6>
+      <p>{{ properties[index].address }}</p>
+    </div>
+    <div class="col">
+      <img src="https://www.droid-life.com/wp-content/uploads/2015/11/google-maps-logo-980x613.jpg" alt="" width="100px">
+    </div>
+    <div class="col">
+     <h2>{{ properties[index].currency + properties[index].price }}</h2>
+    </div>
+    <div class="col-2">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> <h6 class="descriptionTitle" >Descripción:</h6></h5>
+          <p class="card-text">{{ properties[index].description }}</p>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title"> <h6 class="descriptionTitle" >Detalles de propiedad:</h6></h5>
+         <div class="container">
+           <div class="row">
+             <div class="col-4">
+              <i class="bi bi-building">Tipo de propiedad:</i>
+              {{ properties[index].features.propertyType }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-arrow-90deg-up">Niveles:</i>
+              {{ properties[index].features.levels }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-rulers">Tamaño de lote:</i>
+              {{ properties[index].features.lotSize + 'm2' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-truck-flatbed">Cochera:</i>
+              {{ properties[index].features.garage }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-building">Habitaciones:</i>
+              {{ properties[index].features.rooms }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-droplet-fill">Baños:</i>
+              {{ properties[index].features.bathrooms }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-snow">Áire acondicionado:</i>
+              {{ properties[index].features.airConditioner ? 'Si':'No' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-umbrella">Terraza:</i>
+              {{ properties[index].features.terrace ? 'Si':'No' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-flower2">Jardin:</i>
+              {{ properties[index].features.garden ? 'Si':'No' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-building">Cuarto de servicio:</i>
+              {{ properties[index].features.serviceRoom ? 'Si':'No' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-box-seam">Bodega:</i>
+              {{ properties[index].features.warehouse ? 'Si':'No' }}
+             </div>
+             <div class="col-4">
+              <i class="bi bi-shield-lock-fill">Seguridad:</i>
+              {{ properties[index].features.security ? 'Si':'No' }}
+             </div>
+
+           </div>
+         </div>
+          <hr>
+          <div class="btnContainer" >
+             <button (click)="nextProperti()" type="button" class="btn btn-primary nav-buttom">Ver siguiente</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+</div>

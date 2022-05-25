@@ -1,0 +1,20 @@
+$primary-color : #565DA6;
+$secondary-color: #4FB162 ;
+
+#tabs-card{
+  max-width: 70vw;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color:$secondary-color ;
+  background-color: transparent;
+
+}
+.nav-link.active::before{
+  content: "";
+    position: absolute;
+    margin-top: 34px;
+    margin-left: -23px;
+    width: 93px;
+    height: 8px;
+    background-color: $secondary-color;
+}

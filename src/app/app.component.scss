@@ -1,0 +1,26 @@
+$primary-color : #565DA6;
+$secondary-color: #4FB162 ;
+.backgroundContainer{
+  min-height: calc(100vh - 80px);
+  background: lightgrey;
+}
+
+
+.descriptionTitle{
+  text-align: start;
+  color:#565DA6;
+}
+
+
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  .nav-buttom{
+    border-radius: 20px;
+    text-align: center;
+    background-color: $secondary-color;
+    border: none;
+    min-width: 150px;
+  }
+}
+
