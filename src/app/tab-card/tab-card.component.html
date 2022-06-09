@@ -6,9 +6,25 @@
     </nav>
   </div>
   <div *ngIf="showTab == 'imagenes'" class="">
-    <img src="https://live.staticflickr.com/4049/4530846236_5c38702c99_h.jpg" class="card-img-top" alt="...">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- ngfor loop using get dynamic value and ngclass for add acive class -->
+        <div class="carousel-item" *ngFor="let img of images; let i = index" [ngClass]="{'active': i === 1}">
+         <img src={{img}} width="1000px" height="600px" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
   <div *ngIf="showTab == 'mapa'" class="">
-    <app-map></app-map>
+    <app-map [location]="location"   ></app-map>
   </div>
 </div>

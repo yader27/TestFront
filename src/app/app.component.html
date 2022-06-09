@@ -1,7 +1,7 @@
 <app-nav-bar (nextProperti)="nextProperti()" [menuOptions]="menuOptions"  ></app-nav-bar>
 <div class="container-fluid backgroundContainer">
   <div class="container-fluid  p-4 d-flex justify-content-center">
-  <app-tab-card></app-tab-card>
+  <app-tab-card [location]="properties[index].location" [id]="properties[index]._id"></app-tab-card>
 </div>
 <div class="container-fluid">
   <div class="row">
